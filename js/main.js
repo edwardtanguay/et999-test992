@@ -1,3 +1,5 @@
+import * as  tools from './tools.js';
+
 const rootElem = document.querySelector('#root');
 const btnChangeColorElem = document.querySelector('.btnChangeColor');
 
@@ -22,7 +24,7 @@ const url = 'https://edwardtanguay.vercel.app/share/techBooks.json';
 		</style>
 		<h2>There are ${techBooks.length} tech books</h2>
 		<ul>
-		${techBooks.map(techBook => `<li>${techBook.title}</li>`).join('')}
+		${techBooks.map(techBook => tools.getBook(techBook)).join('')}
 		</ul>
 		`;
 })();
